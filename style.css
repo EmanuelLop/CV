@@ -127,6 +127,6 @@ h1, h3 {
     }
 
     .container {
-        padding: 10px; /* Reduce el padding en el contenedor */
+        padding: 50px; /* Reduce el padding en el contenedor */
     }
 }
