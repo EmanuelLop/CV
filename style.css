@@ -9,6 +9,8 @@ body {
     background-size: cover; /* Ajusta el tamaño del fondo para cubrir toda la pantalla */
     background-position: center; /* Centra el fondo */
     background-repeat: no-repeat; /* Evita que el fondo se repita */
+    font-family: Arial, sans-serif; /* Cambia la fuente si lo deseas */
+    padding: 0; /* Elimina el padding del body */
 }
 
 .container {
@@ -17,12 +19,8 @@ body {
     background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco semi-transparente para el contenido */
     padding: 20px; /* Espaciado interno */
     border-radius: 10px; /* Bordes redondeados */
-}
-
-body {
-    font-family: Arial, sans-serif; /* Cambia la fuente si lo deseas */
-    margin: 0;
-    padding: 0;
+    max-width: 90%; /* Ancho máximo del contenedor */
+    margin: 0 auto; /* Centra el contenedor */
 }
 
 .container2 {
@@ -70,16 +68,80 @@ h1, h3 {
     cursor: pointer;
 }
 
-.button1 { top: -70px; left: 50%; transform: translateX(-50%); }
-.button2 { top: 70%; left: -200px; transform: translateY(-50%); }
+.button1 { position: fixed; top: -70px; left: 50%; transform: translateX(-50%); }
+.button2 { position: fixed; top:70%; left: -200px; transform: translateY(-50%); }
 .button3 { top: 70%; right: -140px; transform: translateY(-50%); }
 .button4 { bottom: -50px; left: 50%; transform: translateX(-50%); }
 .button5 { top: 20%; left: -70%; }
 .button6 { top: 20%; right: -55%; }
-.button7 { position: fixed; top:0; right: 0; padding: 5px;}
+.button7 { position: fixed; top: 0; right: 0; padding: 5px; }
 
-    
 .lista {
     text-align: left;
     margin-left: 20px; /* Espaciado a la izquierda */
+}
+
+/* Estilos responsivos */
+@media (max-width: 1024px) {
+    .container {
+        padding: 15px; /* Ajusta el padding en pantallas más pequeñas */
+    }
+
+    .image {
+        width: 150px; /* Ajusta el tamaño de la imagen en pantallas más pequeñas */
+    }
+
+    .button {
+        padding: 8px 16px; /* Ajusta el tamaño de los botones */
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        height: auto; /* Permite que el cuerpo se ajuste a la altura del contenido */
+    }
+
+    .columnas {
+        flex-direction: column; /* Cambia a columna en pantallas pequeñas */
+    }
+
+    .columna {
+        min-width: 100%; /* Cada columna ocupa el 100% del ancho */
+    }
+
+    .image {
+        width: 100%; /* Imagen ocupa el 100% del ancho en pantallas pequeñas */
+        max-width: 300px; /* Ancho máximo para la imagen */
+    }
+
+    .button {
+        width: 100%; /* Botones ocupan el 100% del ancho */
+        margin: 5px 0; /* Espacio entre botones */
+    }
+
+    .lista {
+        margin-left: 0; /* Elimina el margen izquierdo en pantallas pequeñas */
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5em; /* Tamaño de fuente más pequeño para pantallas muy pequeñas */
+    }
+
+    h3 {
+        font-size: 1.2em; /* Tamaño de fuente más pequeño para h3 */
+    }
+
+    .image {
+        margin: 10px; /* Menos margen para imágenes en pantallas pequeñas */
+    }
+
+    .button {
+        padding: 8px 16px; /* Ajusta el padding de los botones */
+    }
+
+    .container {
+        padding: 5px; /* Menos espaciado en contenedores para pantallas pequeñas */
+    }
 }
