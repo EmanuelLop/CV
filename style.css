@@ -1,0 +1,85 @@
+body {
+    display: flex;
+    flex-direction: column; /* Cambia la dirección a columna para apilar el contenido */
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-image: url('https://miro.medium.com/v2/resize:fit:640/format:webp/1*LnOSvWkXLLZPtkjWpau4MA.gif'); /* Ruta del GIF de fondo */
+    background-size: cover; /* Ajusta el tamaño del fondo para cubrir toda la pantalla */
+    background-position: center; /* Centra el fondo */
+    background-repeat: no-repeat; /* Evita que el fondo se repita */
+}
+
+.container {
+    position: relative;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco semi-transparente para el contenido */
+    padding: 20px; /* Espaciado interno */
+    border-radius: 10px; /* Bordes redondeados */
+}
+
+body {
+    font-family: Arial, sans-serif; /* Cambia la fuente si lo deseas */
+    margin: 0;
+    padding: 0;
+}
+
+.container2 {
+    max-width: 1200px; /* Ancho máximo de la página */
+    margin: 0 auto; /* Centra el contenedor */
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco semi-transparente para el contenido */
+    padding: 20px; /* Espaciado interno */
+    border-radius: 10px; /* Bordes redondeados */
+}
+
+.columnas {
+    display: flex; /* Usamos flexbox para crear columnas */
+    flex-wrap: wrap; /* Permite que las columnas se ajusten en pantallas más pequeñas */
+    gap: 20px; /* Espacio entre columnas */
+}
+
+.columna {
+    flex: 1; /* Cada columna ocupa el mismo espacio */
+    min-width: 300px; /* Ancho mínimo para cada columna */
+    box-sizing: border-box; /* Incluye padding y border en el ancho total */
+}
+
+h1, h3 {
+    text-align: center;
+    margin: 10px 0; /* Espaciado entre títulos */
+}
+
+.lista {
+    margin-left: 20px; /* Espaciado para las listas */
+}
+
+.image {
+    width: 200px; /* Ajusta el tamaño de la imagen */
+    height: auto;
+    margin: 20px;
+}
+
+.button {
+    position: absolute;
+    padding: 10px 20px;
+    background-color: #ee742d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.button1 { top: -70px; left: 50%; transform: translateX(-50%); }
+.button2 { top: 70%; left: -200px; transform: translateY(-50%); }
+.button3 { top: 70%; right: -140px; transform: translateY(-50%); }
+.button4 { bottom: -50px; left: 50%; transform: translateX(-50%); }
+.button5 { top: 20%; left: -70%; }
+.button6 { top: 20%; right: -55%; }
+.button7 { position: fixed; top:0; right: 0; padding: 5px;}
+
+    
+.lista {
+    text-align: left;
+    margin-left: 20px; /* Espaciado a la izquierda */
+}
