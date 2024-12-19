@@ -1,0 +1,156 @@
+body {
+    display: flex;
+    flex-direction: column; /* Cambia la dirección a columna para apilar el contenido */
+    justify-content: center; /* Centra el contenido verticalmente */
+    align-items: center; /* Centra el contenido horizontalmente */
+    height: 100vh;
+    margin: 0;
+    background-image: url('https://miro.medium.com/v2/resize:fit:640/format:webp/1*LnOSvWkXLLZPtkjWpau4MA.gif'); /* Ruta del GIF de fondo */
+    background-size: cover; /* Ajusta el tamaño del fondo para cubrir toda la pantalla */
+    background-position: center; /* Centra el fondo */
+    background-repeat: no-repeat; /* Evita que el fondo se repita */
+    font-family: Arial, sans-serif; /* Cambia la fuente si lo deseas */
+    padding: 0; /* Asegúrate de que no haya padding en el body */
+}
+
+.container {
+    position: relative;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco semi-transparente para el contenido */
+    padding: 20px; /* Espaciado interno */
+    border-radius: 10px; /* Bordes redondeados */
+}
+
+.container2 {
+    max-width: 1200px; /* Ancho máximo de la página */
+    margin: 0 auto; /* Centra el contenedor */
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco semi-transparente para el contenido */
+    padding: 20px; /* Espaciado interno */
+    border-radius: 10px; /* Bordes redondeados */
+}
+
+.columnas {
+    display: flex; /* Usamos flexbox para crear columnas */
+    flex-wrap: wrap; /* Permite que las columnas se ajusten en pantallas más pequeñas */
+    gap: 20px; /* Espacio entre columnas */
+}
+
+.columna {
+    flex: 1; /* Cada columna ocupa el mismo espacio */
+    min-width: 300px; /* Ancho mínimo para cada columna */
+    box-sizing: border-box; /* Incluye padding y border en el ancho total */
+}
+
+h1, h3 {
+    text-align: center;
+    margin: 10px 0; /* Espaciado entre títulos */
+}
+
+.lista {
+    margin-left: 20px; /* Espaciado para las listas */
+    text-align: left;
+}
+
+.image {
+    width: 200px; /* Ajusta el tamaño de la imagen */
+    height: auto;
+    margin: 20px;
+}
+
+.button {
+    padding: 10px 20px;
+    background-color: #ee742d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px 0; /* Añade margen entre botones */
+    width: 200px; /* Ajusta el ancho de los botones */
+}
+
+.button7 {
+    position: fixed; /* Mantiene el botón en una posición fija */
+    top: 20px; /* Espacio desde la parte superior */
+    left: 20px; /* Espacio desde la izquierda */
+    z-index: 1000; /* Asegura que el botón esté por encima de otros elementos */
+}
+
+/* Contenedor para los botones */
+.button-container {
+    display: flex;
+    flex-direction: column; /* Asegura que los botones se apilen verticalmente */
+    align-items: center; /* Centra los botones horizontalmente */
+    justify-content: center; /* Centra los botones verticalmente */
+    margin-top: 20px; /* Espacio superior para los botones */
+}
+
+/* Media Queries para Responsividad */
+@media (max-width: 1200px) {
+    .container2 {
+        padding: 15px; /* Reduce el padding en pantallas más pequeñas */
+    }
+
+    .columna {
+        min-width: 250px; /* Reduce el ancho mínimo de las columnas */
+    }
+
+    .image {
+        width: 150px; /* Reduce el tamaño de las imágenes */
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        flex-direction: column; /* Asegúrate de que el contenido se apile en pantallas pequeñas */
+    }
+
+    .button {
+        width: 100%; /* Los botones ocuparán el 100% del ancho */
+        padding: 12px; /* Ajusta el padding para que se vea bien */
+    }
+
+    .columna {
+        flex: 1 1 100%; /* Las columnas ocuparán el 100% del ancho */
+    }
+
+    .lista {
+        margin-left: 10px; /* Reduce el margen de las listas */
+    }
+}
+
+@media (max-width: 480px) {
+    h1, h3 {
+        font-size: 1.5em; /* Reduce el tamaño de la fuente en pantallas muy pequeñas */
+    }
+
+    .button {
+        width: 100%; /* Los botones ocuparán el 100% del ancho */
+        margin: 10px 0; /* Añade margen entre los botones */
+    }
+
+    .image {
+        width: 100%; /* Las imágenes ocuparán el 100% del ancho del contenedor */
+        height: auto; /* Mantiene la proporción de la imagen */
+    }
+
+    .container {
+        padding: 50px; /* Reduce el padding en el contenedor */
+        background-color: rgba(255, 255, 255, 0.46);
+    }
+}
+
+@media (max-width: 768px) {
+    .button7 {
+        width: 40vw; /* Ancho responsivo en pantallas más pequeñas */
+        padding: 8px; /* Ajusta el padding */
+        font-size: 1em; /* Ajusta el tamaño de la fuente */
+    }
+}
+
+@media (max-width: 480px) {
+    .button7 {
+        width: 60vw; /* Ancho aún más responsivo en pantallas muy pequeñas */
+        padding: 6px; /* Ajusta el padding */
+        font-size: 0.9em; /* Ajusta el tamaño de la fuente */
+    }
+}
